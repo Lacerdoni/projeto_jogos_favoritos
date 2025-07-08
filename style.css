@@ -1,0 +1,220 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --fonte_pixel: "Jersey 15", sans-serif;
+    --fonte_mono: "Space Mono", monospace;
+    --cor1_home: #000000;
+    --cor2_home: #222222;
+    --cor3_home: #169976;
+    --cor4_home: #1DCD9F;
+
+}
+/*====================================================================== CÓDIGO GERAL ======================================================================*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fonte_mono);
+    font-size: 1.2rem;
+    text-align: justify;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(assets/imagens/fundo2.jpg);
+    background-attachment: fixed;
+    
+}
+
+header{
+border-radius: 0px 0px 10px 10px;
+border: 1px solid black;
+margin-bottom: 20px;
+text-align: justify;
+text-align: center;
+padding: 10px 20px;
+}
+
+header ul{
+    margin-top: 18px;
+    margin-bottom: 10px;
+
+}
+
+header li{
+    display: inline;
+}
+
+header a{
+    padding: 8px;
+    border-radius: 15px;
+}
+
+main{
+    width: 80%;
+    margin: auto;
+}
+
+footer{
+padding: 1%;
+}
+
+/*==================================================================== CÓDIGO DA HOME ====================================================================*/
+
+#header_home h1{
+    font: 400 4rem var(--fonte_pixel);
+            background-image: linear-gradient(to top, rgb(173, 173, 173), var(--cor2_home));
+            color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 0px rgb(0, 0, 0);
+            
+}
+
+#main_home{
+    background-color: var(--cor4_home);
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.402), inset 0px 0px 5px 2px rgba(0, 0, 0, 0.402);
+
+}
+
+main > h1{
+    padding-top: 30px;
+}
+
+.fotos_apresentacao{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+main img{
+    width: 30%;
+    border-radius: 5%;
+}
+
+ul{
+    list-style: none;
+}
+
+#footer_home{
+    background-color: var(--cor3_home);
+    font-size: 1.4rem;
+    padding: 1%;
+}
+
+
+
+/*==================================================================== CÓDIGO DO NINTENDO ====================================================================*/
+
+.container_jogo{
+   display: grid;
+    grid-template: 
+        "titulo" auto
+        "conteudo" auto / 1fr;
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+    border-radius: 20px;
+    box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.6), inset 0px 0px 20px 12px rgba(0, 0, 0, 0.6);
+    margin: 20px;
+}
+
+.container_jogo h2{
+    grid-area: titulo;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.container_jogo_conteudo {
+    grid-area: conteudo;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.container_jogo_conteudo p{
+   font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+    flex: 1;
+}
+
+.imagens_jogos{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.imagens_jogos img{
+     width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.imagens-jogos{
+    display: flex;
+    justify-content: center;
+    
+}
+.imagens-jogos > img{
+    height: 100px;
+    width: auto;
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#botao-menu{
+    font-size: 25px;
+    outline: auto;
+    margin: auto;
+    background-image: linear-gradient(to bottom, #5175B8 0%, #5CB39B 45%);
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 40px;
+    width: 160px;
+    align-content: center;
+    margin-bottom: 30px;
+}
+#botao-menu:hover{
+    height: 45px;
+    width: 180px;
+    border-radius: 25px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+button{
+    background-color: red;
+    font-size: 25px;
+    text-align: center;
+    margin: 50px;
+    border: 1px solid black;
+    height: 50px;
+    width: 160px; 
+    margin: auto;
+    align-content: center;
+    background-image: linear-gradient(to bottom, #5175B8 0%, #5CB39B 45%);
+}
+
+
+
