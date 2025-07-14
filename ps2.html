@@ -1,58 +1,25 @@
-assets/<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PlayStation2</title>
-    <link rel="shortcut icon" href="imagens/ps2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/imagens/ps2.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <style>
-        body{
-            background-image: linear-gradient(to bottom,#000000, #CC2229,#ECB731 100%);
-            background-attachment: fixed;
-        }
-        header{
-            background-image: linear-gradient(to bottom, #5175B8 0%, #5CB39B 45%);
-            border: 2px solid rgb(210, 199, 199);
-        }
-
-        header a{
-           font: bold 1.3em arial;
-           color: rgb(255, 255, 255);
-           background-color: #5175B8;
-        }
-
-        main{
-            background-color: #7aa297;
-        }
-    
-        main li{
-            background-image: linear-gradient(#5CB39B, #5175B8);
-            
-        }
-        #botao-menu{
-            background-image: linear-gradient(to bottom,#000000, #CC2229);
-            
-        }
-        #botao-menu>a{
-            color: rgb(164, 163, 163);
-        }
+        
+        
     </style>
 </head>
-<body>
-    <audio src="audio/audiops2.mp3"></audio>
-
-    <header>
+<body id="body_ps2">
+    <header id="header_ps2">
         <H1>PlayStation 2</H1>
 
-        <p>
-            O PlayStation2 é o console mais nostalgico de todos os tempo, conhecido por seus 3 jogos por 10 reais. <br>
-             Na época eu lembro de barganhar com os camelôs e comprar 7 jogos por 20 reais.
-        </p>
+        
 
         <nav>
             <ul>
-                <li><a href="jogos.html" rel="prev">Home</a></li>
+                <li><a href="home.html" rel="prev">Home</a></li>
                 <li><a href="nds.html" rel="next">NDS</a></li>
                 <li><a href="xbox.html" rel="next">Xbox</a></li>
                 <li><a href="#">PS4</a></li>
@@ -60,16 +27,22 @@ assets/<!DOCTYPE html>
         </nav>
     </header>
 
-    <main>
-        <h1>Vamos a lista dos meus jogos favoritos de PlayStation2</h1>
-        <article>
-            <div class="lista">
+    <main id="main_ps2">
+
+        <p>
+            O PlayStation2 é o console mais nostalgico de todos os tempo, conhecido por seus 3 jogos por 10 reais.
+             Na época eu lembro de barganhar com os camelôs e comprar 7 jogos por 20 reais.
+        </p>
+
+        
+        <article id="lista_ps2">
+            
+            <h2>Vamos a lista dos meus jogos favoritos de PlayStation2</h2>
+
                 <ul>
                     <li>Ben 10: Protector Of Earth</li>
 
-                    <br>
-
-                    <div class="imagens-jogos">
+                    <div class="imagens_jogos_ps2">
                         <img src="assets/imagens/ps2/ben1.jpg" alt="ben1">
                         <img src="assets/imagens/ps2/ben2.webp" alt="ben2">
                         <img src="assets/imagens/ps2/ben3.jpg" alt="ben3">
@@ -80,9 +53,7 @@ assets/<!DOCTYPE html>
 
                     <li>GTA San Andreas</li>
 
-                    <br>
-
-                    <div class="imagens-jogos">
+                    <div class="imagens_jogos_ps2">
                         <img src="assets/imagens/ps2/gta1.png" alt="gta1">
                         <img src="assets/imagens/ps2/gta2.jpeg" alt="gta2">
                         <img src="assets/imagens/ps2/gta3.webp" alt="gta3">
@@ -92,9 +63,7 @@ assets/<!DOCTYPE html>
 
                     <li>Jak 3</li>
 
-                    <br>
-
-                    <div class="imagens-jogos">
+                    <div class="imagens_jogos_ps2">
                         <img src="assets/imagens/ps2/jak1.jpg" alt="jak1">
                         <img src="assets/imagens/ps2/jak2.webp" alt="jak2">
                     </div>
@@ -104,9 +73,7 @@ assets/<!DOCTYPE html>
 
                     <li>Lego Star Wars</li>
 
-                    <br>
-
-                        <div class="imagens-jogos">
+                        <div class="imagens_jogos_ps2">
                             <img src="assets/imagens/ps2/Legostarwars1.jpg" alt="legostarwars">
                             <img src="assets/imagens/ps2/legostarwars2.webp" alt="legostarwars2">
                             <img src="assets/imagens/ps2/legostarwars3.webp" alt="legostarwars3">
@@ -115,12 +82,11 @@ assets/<!DOCTYPE html>
                     <p>Eu lembro de jogar toda a saga de Lego Star Wars no PS2. era divertido, leve e satisfatório de usar a força pra quebrar os mobs Lego <br>
                     A minha parte favorita era com certeza a da neve, onde eu tinha de derrubar os robôs gigantes fazendo um laço nas pernas deles e os levando ao chão.</p>
                 </ul>
-            </div>
         </article>
         </main>
 
-        <footer>
-            <section id="botao-menu"><a href="jogos.html" rel="prev">VOLTAR</a></section>
+        <footer id="footer_ps2">
+           
         </footer>
 </body>
 </html>

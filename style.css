@@ -2,16 +2,38 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+@font-face{
+    font-family: 'fonte_ps2';
+    src: url(assets/fontes/fonte_ps2/EmotionEngineBold-YGnL.ttf);
+}
+
+@font-face{
+    font-family: 'fonte_ds_titulo';
+    src: url(assets/fontes/fontes_nintendo/RoSpritendoSemiboldBeta-vmVwZ.otf);
+}
+
+@font-face{
+    font-family: 'font_ds_texto';
+    src: url(assets/fontes/fontes_nintendo/FOT-RodinNTLG\ Pro\ DB.otf);
+}
+
 :root{
     --fonte_pixel: "Jersey 15", sans-serif;
     --fonte_mono: "Space Mono", monospace;
+
     --cor1_home: #000000;
     --cor2_home: #222222;
     --cor3_home: #169976;
     --cor4_home: #1DCD9F;
 
+    --cor1_ps2: #CC2229;
+    --cor2_ps2: #5175B8;
+    --cor3_ps2: #5CB39B;
+    --cor4_ps2: #ECB731;
+
 }
-/*====================================================================== CÓDIGO GERAL ======================================================================*/
+
+/*================= CÓDIGO BASE =====================*/
 *{
     margin: 0px;
     padding: 0px;
@@ -23,34 +45,51 @@ body{
     font-size: 1.2rem;
     text-align: justify;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(assets/imagens/fundo2.jpg);
-    background-attachment: fixed;
-    
+}
+
+header h1{
+    font-size: 6rem;
 }
 
 header{
-border-radius: 0px 0px 10px 10px;
-border: 1px solid black;
-margin-bottom: 20px;
-text-align: justify;
-text-align: center;
-padding: 10px 20px;
+    border-radius: 0px 0px 10px 10px;
+    margin-bottom: 20px;
+    text-align: justify;
+    text-align: center;
+    padding-top: 5%;
+}
+
+header nav{
+    margin: 6% 0 2% 0;
 }
 
 header ul{
-    margin-top: 18px;
-    margin-bottom: 10px;
-
-}
-
-header li{
-    display: inline;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
 }
 
 header a{
-    padding: 8px;
+    font: bold 2em var(--fonte_mono);
+    padding: 15px;
     border-radius: 15px;
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+ul{
+    list-style: none;
+}
+
+ol{
+    list-style: none;
 }
 
 main{
@@ -58,71 +97,222 @@ main{
     margin: auto;
 }
 
-footer{
-padding: 1%;
+main h2{
+    margin: auto;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    width: 80%;
 }
 
-/*==================================================================== CÓDIGO DA HOME ====================================================================*/
+footer{
+    padding-top: 1%;
+    margin-top: 8%;
+    font-size: 1.4rem;
+}
+
+footer h4{
+    font-size: 1.6rem;
+}
+
+footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 4%;
+}
+
+footer li a{
+    margin: 1%;
+    display: flex;
+    gap: 8%;
+}
+
+
+
+
+
+/*================= CÓDIGO DA HOME =====================*/
+
+#body_home{
+    background-image: url(assets/imagens/fundo2.jpg);
+    background-attachment: fixed;
+}
+
+#header_home{
+    background-image: 
+        linear-gradient(to bottom,
+        var(--cor3_home) 25%,
+        var(--cor4_home));
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.196);
+    border: 1px solid black;
+    padding-top: 3%;
+}
 
 #header_home h1{
-    font: 400 4rem var(--fonte_pixel);
-            background-image: linear-gradient(to top, rgb(173, 173, 173), var(--cor2_home));
-            color: transparent;
-            background-clip: text;
-            text-shadow: 2px 2px 0px rgb(0, 0, 0);
-            
+    font-family: var(--fonte_pixel);
+    font-weight: 400;
+    background-color: rgb(192, 192, 192); /* Cor do efeito fundo da letra */
+    color: transparent;
+    background-clip: text; 
+    text-shadow: 2px 2px 0px rgb(0, 0, 0);
+}
+
+#header_home nav img{
+    border: 1px solid black;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.6s ease;
+}
+
+#header_home nav img:hover{
+    transform: scale(1.1);
+   
+}
+
+#header_home a{
+    padding: 0;
 }
 
 #main_home{
     background-color: var(--cor4_home);
-    border-radius: 10px 10px 0px 0px;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.402), inset 0px 0px 5px 2px rgba(0, 0, 0, 0.402);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.402),
+        inset 0px 0px 5px 2px rgba(0, 0, 0, 0.402);
+    padding: 2% 0 4% 0;
 
 }
 
-main > h1{
-    padding-top: 30px;
+#top_3_jogos h2{
+    margin: auto;
 }
 
-.fotos_apresentacao{
-    display: flex;
-    justify-content: center;
-    gap: 10%;
+#top_3_jogos h3{
+    margin: 3%;
 }
 
-main img{
-    width: 30%;
-    border-radius: 5%;
+#main_home p{
+    padding: 5%;
 }
 
-ul{
-    list-style: none;
+#top_3_jogos iframe{
+    border-radius: 20px;
+    width: 90%;
 }
+
 
 #footer_home{
     background-color: var(--cor3_home);
-    font-size: 1.4rem;
-    padding: 1%;
+    
 }
 
 
 
-/*==================================================================== CÓDIGO DO NINTENDO ====================================================================*/
+/*================= CÓDIGO DO PS2 =====================*/
 
-.container_jogo{
+#body_ps2{
+    line-height: 1.3em;
+    background-image: linear-gradient(to bottom,
+        black, var(--cor1_ps2),var(--cor4_ps2) 100%);
+        background-attachment: fixed;
+}
+
+#header_ps2{
+    background-image: linear-gradient(to bottom,
+        var(--cor2_ps2) 0%, var(--cor3_ps2) 45%);
+    box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.5);
+    padding-bottom: 20px;
+}
+
+#header_ps2 h1{
+    font-family: 'fonte_ps2';
+    text-shadow: 4px 4px 1px rgba(0, 0, 0, 0.4);
+    
+}
+
+#header_ps2 a{
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    background-color: var(--cor2_ps2);
+    transition: all 0.3s ease;
+    }
+
+#header_ps2 a:hover{
+    background-color: var(--cor4_ps2);
+    color: black;
+    
+}
+
+#header_ps2 li:hover{
+    transform: scale(1.2);
+    transition-duration: 0.7s;
+}
+
+#main_ps2{
+    border-radius: 15px 15px 0px 0px;
+    background-color: var(--cor3_ps2);
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5),
+        inset 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+    padding: 4% 0%;
+}
+
+#main_ps2 > p {
+    padding: 0 5%;
+}
+
+#main_ps2 li{
+    background-image:
+        linear-gradient(var(--cor3_ps2),
+        var(--cor2_ps2));
+    margin: 5%;
+    border-radius: 10px;
+    border: 1px dotted black;
+}
+
+.imagens_jogos_ps2{
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+
+.imagens_jogos_ps2  img{
+    height: 20vw;
+    width: auto;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+#main_ps2 article p{
+    margin: auto;
+    margin-top: 3%;
+    width: 80%;
+    text-align: justify;
+    
+}
+
+/*================= CÓDIGO DO NDS =====================*/
+#header_nds h1{
+    font-family: 'fonte_ds_titulo';
+}
+
+
+.container_jogos_nds{
    display: grid;
     grid-template: 
         "titulo" auto
         "conteudo" auto / 1fr;
     gap: 20px;
     padding: 20px;
-    align-items: start;
+    justify-items: center;
     border-radius: 20px;
-    box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.6), inset 0px 0px 20px 12px rgba(0, 0, 0, 0.6);
+    box-shadow:  0px 0px 10px 2px rgba(0, 0, 0, 0.6),
+        inset 0px 0px 20px 12px rgba(0, 0, 0, 0.6);
     margin: 20px;
+    
 }
 
-.container_jogo h2{
+.container_jogos_nds h2{
     grid-area: titulo;
     font-size: 1.5rem;
     text-align: center;
@@ -133,7 +323,7 @@ ul{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .container_jogo_conteudo p{
@@ -156,65 +346,129 @@ ul{
     border-radius: 8px;
 }
 
-.imagens-jogos{
-    display: flex;
-    justify-content: center;
-    
-}
-.imagens-jogos > img{
-    height: 100px;
-    width: auto;
-    display: flex;
+
+/*==================== Media Queries ====================*/
+
+@media(max-width: 860px){
+/*Query Base 860px*/
+header h1{
+    font-size: 4rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#botao-menu{
-    font-size: 25px;
-    outline: auto;
-    margin: auto;
-    background-image: linear-gradient(to bottom, #5175B8 0%, #5CB39B 45%);
-    border: 1px solid black;
-    border-radius: 20px;
-    height: 40px;
-    width: 160px;
-    align-content: center;
-    margin-bottom: 30px;
+header nav{
+    margin: 7% 0 1% 0;
 }
-#botao-menu:hover{
-    height: 45px;
-    width: 180px;
-    border-radius: 25px;
+
+header a{
+    font-size: 1.8rem;
+    padding: 12px;
 }
-a{
-    text-decoration: none;
-    color: black;
+
+main{
+    width: 95%;
 }
-button{
-    background-color: red;
-    font-size: 25px;
-    text-align: center;
-    margin: 50px;
-    border: 1px solid black;
-    height: 50px;
-    width: 160px; 
-    margin: auto;
-    align-content: center;
-    background-image: linear-gradient(to bottom, #5175B8 0%, #5CB39B 45%);
+
+main h2{
+    font-size: 2rem;
+    line-height: 2.2rem;
+}
+
+footer{
+    font-size: 1.2rem;
+}
+
+footer h4{
+    font-size: 1.4rem;
 }
 
 
 
+/*Query Home 860px*/
+  
+
+
+/*Query PS2 860px*/
+
+}
+
+
+/*============= 640px ================*/
+@media (max-width: 640px){
+/*Query Base 640px*/
+body p{
+    font-size: 1.1rem;
+}
+
+header h1{
+    font-size: 3rem;
+}
+
+header nav{
+    margin: 8% 0 1% 0;
+}
+
+header a{
+    font-size: 1.5rem;
+    padding: 10;
+}
+
+main h2{
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+}
+
+footer{
+    font-size: 1rem;
+}
+
+footer h4{
+    font-size: 1.2rem;
+}
+
+/*Query Home 640px*/
+
+#main_home{
+    width: 95%;
+}
+
+/*Query PS2 640px*/
+}
+
+/*============ 445px ===========*/
+@media (max-width: 445px){
+/*Query Base 445px*/
+body p{
+    font-size: 0.9rem;
+}
+
+
+header h1{
+font-size: 2.6rem;
+}
+
+header nav{
+    margin: 10% 0 1% 0;
+}
+
+header a{
+    font-size: 1rem;
+    padding: 8px;
+
+}
+
+main h2{
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+}
+
+footer{
+    font-size: 0.8rem;
+}
+
+footer h4{
+    font-size: 1rem;
+}
+
+    /*Query Home 445px*/
+
+}
